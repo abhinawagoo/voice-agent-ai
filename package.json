@@ -1,0 +1,17 @@
+{
+  "name": "voice-agent-ai",
+  "version": "1.0.0",
+  "description": "AI-driven voice agent for inbound and outbound calls, lead generation, and appointment booking.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
