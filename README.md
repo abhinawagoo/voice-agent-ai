@@ -1,3 +1,3 @@
 # Voice Agent AI
 
-AI-driven voice agent for inbound and outbound calls, lead generation, and appointment booking.
+This project is an AI-powered voice assistant for real estate cold calling, using Node.js and Express.js.
