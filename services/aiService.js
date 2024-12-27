@@ -9,11 +9,21 @@ const openai = new OpenAI({
 });
 
 // Function to generate response based on prompt
-const generateResponse = async (prompt) => {
+const generateResponse = async (transcriptionText) => {
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini", // Specify the model
-      messages: [{ role: "user", content: prompt }], // Chat-based input
+      messages: [
+        {
+          role: "system",
+          content:
+            "You are a helpful assistant that responds to voice messages.",
+        },
+        {
+          role: "user",
+          content: transcriptionText,
+        },
+      ], // Chat-based input
     });
 
     return completion.choices[0].message.content;

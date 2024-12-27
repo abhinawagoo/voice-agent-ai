@@ -1,6 +1,6 @@
 // controllers/aiController.js
 
-const openaiService = require("../services/openaiService");
+const openaiService = require("../services/aiService");
 
 // Get AI-generated response (example for lead generation)
 const getAiResponse = async (req, res) => {

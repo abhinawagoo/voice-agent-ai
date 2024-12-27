@@ -5,6 +5,7 @@ const connectDB = require("./config/db");
 // importScripts
 const callRoutes = require("./routes/callRoutes");
 const aiRoutes = require("./routes/aiRoutes");
+const twilioRoutes = require("./routes/twilioRoutes");
 
 // Load environment variables
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(express.json());
 
 app.use("/api", callRoutes);
 app.use("/agent", aiRoutes);
+app.use("/twilio", twilioRoutes);
 
 // Default route
 app.get("/", (req, res) => {
