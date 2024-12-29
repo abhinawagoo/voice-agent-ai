@@ -40,7 +40,7 @@ const initiateCall = async (req, res) => {
     // TwiML XML to use 'Say' and 'Record' commands for speech-to-text
     const twiml = `<Response>
                     <Say>Please speak after the beep. We will process your response.</Say>
-                    <Record maxLength="30" transcribe="true" action="https://a-67522428183.us-central1.run.app/twilio/process-transcription" />
+                    <Record maxLength="30" transcribe="true" action="https://a-67522428183.us-central1.run.app/"  transcribeCallback="https://a-67522428183.us-central1.run.app/twilio/process-transcription" />
                   </Response>`;
 
     const call = await client.calls.create({
