@@ -22,6 +22,16 @@ app.use("/api", callRoutes);
 app.use("/agent", aiRoutes);
 app.use("/twilio", twilioRoutes);
 
+app.post("/twilio/process-recording", (req, res) => {
+  const recordingUrl = req.body.RecordingUrl;
+  const callSid = req.body.CallSid;
+
+  console.log("Recording URL:", recordingUrl);
+  console.log("Call SID:", callSid);
+
+  res.status(200).send("Recording received");
+});
+
 // Default route
 app.get("/", (req, res) => {
   res.send("Voice Agent AI API is running...");
